@@ -9,7 +9,7 @@ class music{
 
     is_target_data(target){
         for(let i=0; i<this.idols.length; i++){
-            if(target.trim() == this.idols[i].trim()){
+            if(target == this.idols[i]){
                 return true;
             }
         }
@@ -25,8 +25,8 @@ class nameManager{
 
     get_true_name(cand_name){
         for(let i=0; i<this.candidates.length; i++){
-            const temp = this.candidates[i].trim();
-            if(cand_name.trim() == temp) return true;
+            const temp = this.candidates[i];
+            if(cand_name == temp) return true;
         }
         return false;
     }
@@ -74,7 +74,7 @@ function makeTargetIdolList(target_idols){
     for(let i=1; i<target_idols.length; i++){
         let temp_list = [];
         target_list.forEach(function(music){
-            if(music.is_target_data(target_idols[i]) && music.name.trim() != "お願い！シンデレラ"){
+            if(music.is_target_data(target_idols[i]) && music.name != "お願い！シンデレラ"){
                 temp_list.push(music);
             }
             target_list = temp_list.slice();
@@ -93,7 +93,7 @@ function makeTable(){
     let result = "<table border=1>";
     target_list.forEach(function(music){
         result += `<tr>`;
-        result += `<td>${music.name.trim()}</td><td>${music.unit.trim()}</td>`;
+        result += `<td>${music.name}</td><td>${music.unit}</td>`;
         result += `<td>`;
         if(music.name == "お願い！シンデレラ"){result += `</td>`; return;}
         for(let i=0; i<music.idols.length-1; i++) result += `${music.idols[i]}, `
@@ -117,4 +117,5 @@ function makeIdolList(text){
         if(name != "") idolList.push(name)
     });
     return idolList;
+
 }
