@@ -1,2 +1,2 @@
-# cinderella_database
+# シンデレラデータベース
 デレ　アイドル検索
