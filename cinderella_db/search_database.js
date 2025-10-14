@@ -54,6 +54,7 @@ function loadCSV(){
             const name_datas = csvText.split('\r\n');
             name_datas.forEach(function(data){
                 const row = data.split(',');
+                console.log(row);
                 conversion_list.push(new nameManager(row[0], row.slice(1)));
             });
         })
