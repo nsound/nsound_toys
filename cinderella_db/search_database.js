@@ -48,7 +48,7 @@ function loadCSV(){
             console.error("Loading failed.", error);
         });
 
-    fetch('name_conversion2.csv')
+    fetch('name_conversion.csv')
         .then(response => response.text())
         .then(csvText => {
             const name_datas = csvText.split('\r\n');
