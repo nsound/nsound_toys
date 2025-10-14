@@ -106,16 +106,24 @@ function makeTable(){
 function makeIdolList(text){
     newText = text.replaceAll('　', ' ');
     let temp = newText.split(' ');
+    console.log("list: " + temp);
     
     let idolList = [];
     temp.forEach(function(temp_name){
         let name = "";
         conversion_list.forEach(function(nm){
-            if(nm.get_true_name(temp_name)) name = nm.true_name;
-            return;
+            if(temp_name == nm.true_name){
+                name = nm.true_name;
+                return;
+            }
+            if(nm.get_true_name(temp_name)){
+                name = nm.true_name;
+                return;
+            }
         });
         if(name != "") idolList.push(name)
     });
-    return idolList;
 
+    console.log("newlist: " + idolList);
+    return idolList;
 }
