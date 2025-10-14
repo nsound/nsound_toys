@@ -8,17 +8,7 @@ class music{
     }
 
     is_target_data(target){
-        for(let i=0; i<this.idols.length; i++){
-            if(target == "島村卯月" && this.name == "はにかみdays"){
-                console.log("target:");
-                for(let i=0; i<target.length; i++) console.log(target.charCodeAt(i));
-                console.log("idol_name:");
-                for(let i=0; i<this.idols[0].length; i++) console.log(this.idols[0].charCodeAt(i));
-            }
-            if(target == this.idols[i]){
-                return true;
-            }
-        }
+        for(let i=0; i<this.idols.length; i++) if(target == this.idols[i]) return true;
         return false;
     }
 }
@@ -37,57 +27,6 @@ class nameManager{
         return false;
     }
 }
-
-//↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ いつか直す ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
-// function makeDB(){
-//     loadCSV('cg_musics.csv')
-//         .then(music_datas => {
-//             music_datas.forEach(function(data){
-//                 const row = data.split(',');
-//                 music_list.push(new music(row[0], row[1], row.slice(2)));
-//             });
-//             loadCSV('name_conversion.csv')
-//                 .then(conversion_data => {
-//                     conversion_data.forEach(function(data){
-//                         const row = data.split(',');
-//                         conversion_list.push(new nameManager(row[0], row.slice(1)));
-//                     });
-//                 });
-//         });
-
-//     console.log(music_list);
-//     console.log(conversion_list);
-// }
-
-// // function makeDB(){
-// //     const music_datas = loadCSV('cg_musics.csv');
-// //     music_datas.forEach(function(data){
-// //         const row = data.split(',');
-// //         music_list.push(new music(row[0], row[1], row.slice(2)));
-// //     });
-// //     const conversion_datas = loadCSV('name_conversion.csv');
-// //     conversion_datas.forEach(function(data){
-// //         const row = data.split(',');
-// //         conversion_list.push(new nameManager(row[0], row.slice(1)));
-// //     });
-// // }
-
-// function loadCSV(fname){
-//     let arranged_list = [];
-//     fetch(fname)
-//         .then(response => response.text())
-//         .then(csvText => {
-//             let temp_text = "";
-//             temp_text = csvText.replaceAll("\r\n", "\n");
-//             temp_text = temp_text.replaceAll("\r", "\n");
-
-//             arranged_list = temp_text.split('\n');
-//         })
-//         .catch(error => {
-//             console.error("Loading failed.", error);
-//         });
-//     return arranged_list;
-// }
 
 const music_list = []
 const conversion_list = []
@@ -124,7 +63,6 @@ function loadCSV(){
 }
 
 function makeTargetIdolList(target_idols){
-    console.log(target_idols);
     let target_list = [];
     music_list.forEach(function(music){
         if(music.is_target_data(target_idols[0])) target_list.push(music);
@@ -166,7 +104,6 @@ function makeTable(){
 function makeIdolList(text){
     newText = text.replaceAll('　', ' ');
     let temp = newText.split(' ');
-    console.log("list: " + temp);
     
     let idolList = [];
     temp.forEach(function(temp_name){
@@ -184,6 +121,5 @@ function makeIdolList(text){
         if(name != "") idolList.push(name)
     });
 
-    console.log("newlist: " + idolList);
     return idolList;
 }
