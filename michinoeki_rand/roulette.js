@@ -52,13 +52,7 @@ function showNextSt(){
         result += "<tr><td>" + `${dest.name}` + "</td>";
         result += "<td>" + `${dest.pref}` + "</td>";
         result += "<td>" + `${dest.region}` + "</td>";
-        result += "<td>" + `${dest.url}` + "</td></tr></table>";
+        result += "<td><a href=\"" + `${dest.url}` + "\">" + `${dest.url}` + "</a></td></tr></table>";
     }
-
-    // let result = "<table boader=1>";
-    
-    // result += "<tr><td>${st_list[0].pref}</td><td>${st_list[0].name}</td><td>${st_list[0].region}</td><td>${st_list[0].url}</td></tr>";
-
-    // result += "</table>";
     document.getElementById("output").innerHTML = result;
 }
