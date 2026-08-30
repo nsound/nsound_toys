@@ -48,11 +48,10 @@ function showNextSt(){
         const rand_idx = Math.floor(Math.random()*target_list.length);
         console.log(rand_idx);
         const dest = target_list[rand_idx];
-        result = "<table border=1><th>道の駅名</th><th>都道府県</th><th>地域</th><th>サイトのURL</th>";
-        result += "<tr><td>" + `${dest.name}` + "</td>";
-        result += "<td>" + `${dest.pref}` + "</td>";
-        result += "<td>" + `${dest.region}` + "</td>";
-        result += "<td><a href=\"" + `${dest.url}` + "\">" + `${dest.url}` + "</a></td></tr></table>";
+        result = "<table border=1><tr><th>道の駅名</th><td>" + `${dest.name}` + "</td></tr>"
+        result += "<tr><th>都道府県名</th><td>" + `${dest.pref}` + "</td></tr>";
+        result += "<tr><th>地域</th><td>" + `${dest.name}` + "</td></tr>"
+        result += "<tr><th>URL</th><td><a href=\"" + `${dest.url}` + "\">" + `${dest.url}` + "</td></tr></table>";
     }
     document.getElementById("output").innerHTML = result;
 }
