@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <script src="roulette.js"></script>
+    <meta charset="UTF-8">
+    <title>道の駅ルーレット</title>
+</head>
+<body>
+    <p><h3>道の駅ルーレット</h3></p>
+    <div id="roulette">
+        <button id="button" onclick="showNextSt()">次の目的地を決める</button>
+    </div>
+    
+    <div id="result">
+        <p><h3>次の目的地：</h3></p>
+        <div id="output"></div>
+    </div>
+
+    <div id="pref check">
+        <p><h3>都道府県設定</h3></p>
+        <div>
+            <input type="checkbox" name="station" value="北海道">北海道
+        </div>
+        <div>
+            <input type="checkbox" name="station" value="青森県">青森
+            <input type="checkbox" name="station" value="岩手県">岩手
+            <input type="checkbox" name="station" value="秋田県">秋田
+            <input type="checkbox" name="station" value="宮城県">宮城
+            <input type="checkbox" name="station" value="山形県">山形
+            <input type="checkbox" name="station" value="福島県">福島
+        </div>
+        <div>
+            <input type="checkbox" name="station" value="茨城県">茨城
+            <input type="checkbox" name="station" value="栃木県">栃木
+            <input type="checkbox" name="station" value="群馬県">群馬
+            <input type="checkbox" name="station" value="千葉県">千葉
+            <input type="checkbox" name="station" value="埼玉県">埼玉
+            <input type="checkbox" name="station" value="東京都">東京
+            <input type="checkbox" name="station" value="神奈川県">神奈川
+        </div>
+        <div>
+            <input type="checkbox" name="station" value="新潟県">新潟
+            <input type="checkbox" name="station" value="富山県">富山
+            <input type="checkbox" name="station" value="石川県">石川
+            <input type="checkbox" name="station" value="福井県">福井
+            <input type="checkbox" name="station" value="長野県">長野
+            <input type="checkbox" name="station" value="岐阜県">岐阜
+            <input type="checkbox" name="station" value="山梨県">山梨
+            <input type="checkbox" name="station" value="静岡県">静岡
+            <input type="checkbox" name="station" value="愛知県">愛知
+        </div>
+        <div>
+            <input type="checkbox" name="station" value="滋賀県">滋賀
+            <input type="checkbox" name="station" value="京都府">京都
+            <input type="checkbox" name="station" value="大阪府">大阪
+            <input type="checkbox" name="station" value="兵庫県">兵庫
+            <input type="checkbox" name="station" value="三重県">三重
+            <input type="checkbox" name="station" value="奈良県">奈良
+            <input type="checkbox" name="station" value="和歌山県">和歌山
+        </div>
+        <div>
+            <input type="checkbox" name="station" value="鳥取県">鳥取
+            <input type="checkbox" name="station" value="島根県">島根
+            <input type="checkbox" name="station" value="岡山県">岡山
+            <input type="checkbox" name="station" value="広島県">広島
+            <input type="checkbox" name="station" value="山口県">山口
+        </div>        
+        <div>
+            <input type="checkbox" name="station" value="香川県">香川
+            <input type="checkbox" name="station" value="徳島県">徳島
+            <input type="checkbox" name="station" value="愛媛県">愛媛
+            <input type="checkbox" name="station" value="高知県">高知
+        </div>
+        <div>
+            <input type="checkbox" name="station" value="福岡県">福岡
+            <input type="checkbox" name="station" value="佐賀県">佐賀
+            <input type="checkbox" name="station" value="長崎県">長崎
+            <input type="checkbox" name="station" value="大分県">大分
+            <input type="checkbox" name="station" value="熊本県">熊本
+            <input type="checkbox" name="station" value="宮崎県">宮崎
+            <input type="checkbox" name="station" value="鹿児島県">鹿児島
+            <input type="checkbox" name="station" value="沖縄県">沖縄
+        </div>
+    </div>
+</body>
+</html>
