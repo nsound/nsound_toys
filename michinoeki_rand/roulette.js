@@ -50,7 +50,7 @@ function showNextSt(){
         const dest = target_list[rand_idx];
         result = "<table border=1><tr><th>道の駅名</th><td>" + `${dest.name}` + "</td></tr>"
         result += "<tr><th>都道府県名</th><td>" + `${dest.pref}` + "</td></tr>";
-        result += "<tr><th>地域</th><td>" + `${dest.name}` + "</td></tr>"
+        result += "<tr><th>地域</th><td>" + `${dest.region}` + "</td></tr>"
         result += "<tr><th>URL</th><td><a href=\"" + `${dest.url}` + "\">" + `${dest.url}` + "</td></tr></table>";
     }
     document.getElementById("output").innerHTML = result;
